@@ -16,9 +16,20 @@ namespace Projeto04{
             p.Preco = double.Parse(Console.ReadLine());
             Console.Write("Quantidade no estoque; ");
             p.Quantidade = int.Parse(Console.ReadLine());
+            Console.WriteLine();
             Console.WriteLine("Dados do produto; " + p);
+            Console.WriteLine();
+            Console.WriteLine("Digite o número de produtos a ser adicionado; ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+            Console.WriteLine("Dados atualizados! ");
+            Console.WriteLine(p);
+            Console.WriteLine("Digite o número de produtos a ser removido; ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine("Dados atualizados! ");
+            Console.WriteLine(p);
             Console.ReadLine();
-
         }
     }
 }
